@@ -16,11 +16,13 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Creating .env
         run: |
-          echo "${{ toJSON(env) }}"
-          echo "${{ toJSON(vars) }}"
-          echo "${{ toJSON(secrets) }}"
+          json_data=${{ toJSON(vars) }}
+          env_data=$(echo "$json_data" | jq -r 'to_entries | map("\(.key)=\(.value|tostring)") | .[]')
+          echo "$env_data" > .env
       - name: print
-        run: ls -la
+        run: | 
+          ls -la
+          echo .env
       - name: Build application
         run: yarn build
       - name: deploy to server

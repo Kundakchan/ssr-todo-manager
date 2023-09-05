@@ -29,16 +29,17 @@ const items: ItemType[] = reactive([
 </script>
 
 <template>
-<a-dropdown>
-  <a-button :shape="'circle'" :type="'primary'" :size="'large'" :icon="h(UserOutlined)"></a-button>
-  <template #overlay>
-    <div>
-      <a-button v-for="(item) in 3">item - {{ item }}</a-button>
-    </div>
-    
-    <!-- <a-menu
-      :items="items"
-    /> -->
-  </template>
-</a-dropdown>
+  <client-only>
+    <template #fallback>
+      <a-button :shape="'circle'" :type="'primary'" :size="'large'" :icon="h(UserOutlined)"></a-button>
+    </template>
+    <a-dropdown>
+      <a-button :shape="'circle'" :type="'primary'" :size="'large'" :icon="h(UserOutlined)"></a-button>
+      <template #overlay>
+        <a-menu
+          :items="items"
+        />
+      </template>
+    </a-dropdown>
+  </client-only>
 </template>

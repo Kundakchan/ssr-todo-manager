@@ -14,6 +14,8 @@ jobs:
           node-version: 20
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
+      - name: Creating .env
+        run: echo ${{ env }}
       - name: Build application
         run: yarn build
       - name: deploy to server

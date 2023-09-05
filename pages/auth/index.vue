@@ -20,7 +20,6 @@ const submit = async () => {
 
 <template>
   <div class="login">
-    <a-typography-title :level="3">Lorem ipsum dolor sit amet.</a-typography-title>
     <a-typography-title :level="3">Авторизация</a-typography-title>
     <a-typography-title :level="5">Email</a-typography-title>
     <a-input v-model:value="email"/>

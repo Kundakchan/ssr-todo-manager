@@ -15,9 +15,10 @@ jobs:
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
       - name: Creating .env
-        run: 
-          echo ${vars} > .env
-          echo ${vars}
+        run: |
+          echo "${{ toJSON(env) }}"
+          echo "${{ toJSON(vars) }}"
+          echo "${{ toJSON(secrets) }}"
       - name: print
         run: ls -la
       - name: Build application

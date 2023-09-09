@@ -1,4 +1,4 @@
-@import '../variables/fonts';
+@import "../variables/fonts";
 
 @each $key, $value in $sizes {
   .fs-#{$key} {

@@ -1,44 +1,51 @@
 <script lang="ts" setup>
-import { UserOutlined } from '@ant-design/icons-vue'
+import { UserOutlined } from "@ant-design/icons-vue";
 
 // Types
-import type { ItemType } from 'ant-design-vue'
+import type { ItemType } from "ant-design-vue";
 
 const items: ItemType[] = reactive([
   {
-    key: 'Profile',
-    label: 'Настройка профиля',
+    key: "Profile",
+    label: "Настройка профиля",
     onClick: () => {
       return navigateTo({
-        name: 'profile'
-      })
-    }
+        name: "profile",
+      });
+    },
   },
   {
-    key: 'LogOut',
-    label: 'Выйти',
+    key: "LogOut",
+    label: "Выйти",
     onClick: async () => {
-      await logOut()
+      await logOut();
       return navigateTo({
-        name: 'auth'
-      })
-    }
-  }
-])
-
+        name: "auth",
+      });
+    },
+  },
+]);
 </script>
 
 <template>
   <client-only>
     <template #fallback>
-      <a-button :shape="'circle'" :type="'primary'" :size="'large'" :icon="h(UserOutlined)"></a-button>
+      <a-button
+        :shape="'circle'"
+        :type="'primary'"
+        :size="'large'"
+        :icon="h(UserOutlined)"
+      ></a-button>
     </template>
     <a-dropdown>
-      <a-button :shape="'circle'" :type="'primary'" :size="'large'" :icon="h(UserOutlined)"></a-button>
+      <a-button
+        :shape="'circle'"
+        :type="'primary'"
+        :size="'large'"
+        :icon="h(UserOutlined)"
+      ></a-button>
       <template #overlay>
-        <a-menu
-          :items="items"
-        />
+        <a-menu :items="items" />
       </template>
     </a-dropdown>
   </client-only>

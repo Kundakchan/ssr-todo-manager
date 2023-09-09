@@ -1,13 +1,12 @@
-
 $positions: (
-  t: 'top',
-  r: 'right',
-  b: 'bottom',
-  l: 'left'
+  t: "top",
+  r: "right",
+  b: "bottom",
+  l: "left",
 );
 $properties: (
-  m: 'margin',
-  p: 'padding'
+  m: "margin",
+  p: "padding",
 );
 
 $quantity: (
@@ -15,7 +14,7 @@ $quantity: (
   8: 8,
   24: 24,
   64: 64,
-  48: 48
+  48: 48,
 );
 
 @each $key, $value in $properties {

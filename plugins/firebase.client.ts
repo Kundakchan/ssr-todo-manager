@@ -1,11 +1,11 @@
-import { initializeApp } from 'firebase/app'
+import { initializeApp } from "firebase/app";
 
 export default defineNuxtPlugin({
-  name: 'firebase',
+  name: "firebase",
   parallel: true,
-  async setup (nuxtApp) {
-    const config = useRuntimeConfig().public.FIREBASE_CONNECTION
-    initializeApp(config)
-    initFirebase()
-  }
-})
+  setup() {
+    const config = useRuntimeConfig().public.FIREBASE_CONNECTION;
+    initializeApp(config);
+    initFirebase();
+  },
+});

@@ -20,7 +20,7 @@ jobs:
           env_data=$(echo "$json_data" | jq -r 'to_entries | map("\(.key)=\(.value|tostring)") | .[]')
           echo "$env_data" > .env
       - name: print
-        run: | 
+        run: |
           ls -la
           echo .env
       - name: Build application
@@ -31,7 +31,7 @@ jobs:
           host: ${{ secrets.DEPLOY_SERVER_HOST }}
           port: ${{ secrets.DEPLOY_SERVER_PORT  }}
           username: ${{ secrets.DEPLOY_SERVER_USERNAME }}
-          key:  ${{ secrets.DEPLOY_SERVER_KEY }}
+          key: ${{ secrets.DEPLOY_SERVER_KEY }}
           source: ${{ env.BUILD }}
           target: ${{ env.DEPLOY_PATH }}
           strip_components: 1

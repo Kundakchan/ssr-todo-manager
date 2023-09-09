@@ -12,7 +12,7 @@ const submit = async () => {
     await logIn(password.value, email.value);
     navigateTo({ name: "index" });
   } catch (error) {
-    console.error(error);
+    // console.error(error);
   }
 };
 </script>

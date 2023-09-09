@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import ru_RU from "ant-design-vue/es/locale/ru_RU";
-const locale = reactive(ru_RU);
+import ruRU from "ant-design-vue/es/locale/ru_RU";
+const locale = reactive(ruRU);
 const theme = reactive({
   token: {
     borderRadius: 0,

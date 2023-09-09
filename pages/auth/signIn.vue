@@ -12,7 +12,7 @@ const submit = async () => {
     await registration(password.value, email.value, username.value);
     navigateTo({ name: "index" });
   } catch (error) {
-    console.error(error);
+    // console.error(error);
   }
 };
 </script>

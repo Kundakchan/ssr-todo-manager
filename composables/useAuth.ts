@@ -8,7 +8,7 @@ import {
 } from "firebase/auth";
 import type { LogIn, Registration } from "~/types/auth";
 
-export const initFirebase = async () => {
+export const initFirebase = () => {
   const auth = getAuth();
   onAuthStateChanged(auth, async (user) => {
     const firebaseUser = useFirebaseUser();

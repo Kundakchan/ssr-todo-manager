@@ -3,7 +3,7 @@ import type { TableColumnProps } from "ant-design-vue";
 
 const searchText = ref("");
 const onSearch = () => {
-  console.log("onSearch");
+  // console.log("onSearch");
 };
 
 interface Users {
@@ -44,34 +44,36 @@ const columns: TableColumnProps<Users>[] = reactive([
 </script>
 
 <template>
-  <a-row :justify="'center'">
-    <a-col>
-      <a-typography-title class="fs-64 mb48 mt48"
-        ><span class="color-red">П</span>ользователи</a-typography-title
-      >
-    </a-col>
-  </a-row>
-  <a-row :justify="'center'" class="mb24">
-    <a-col :span="12">
-      <a-input-search
-        v-model:value="searchText"
-        placeholder="Имя пользователя"
-        enter-button="Поиск"
-        size="large"
-        @search="onSearch"
-      />
-    </a-col>
-  </a-row>
-  <a-row :span="24">
-    <ClientOnly>
-      <a-table
-        class="table-users"
-        row-key="id"
-        :data-source="usersList"
-        :columns="columns"
-      ></a-table>
-    </ClientOnly>
-  </a-row>
+  <div>
+    <a-row :justify="'center'">
+      <a-col>
+        <a-typography-title class="fs-64 mb48 mt48"
+          ><span class="color-red">П</span>ользователи</a-typography-title
+        >
+      </a-col>
+    </a-row>
+    <a-row :justify="'center'" class="mb24">
+      <a-col :span="12">
+        <a-input-search
+          v-model:value="searchText"
+          placeholder="Имя пользователя"
+          enter-button="Поиск"
+          size="large"
+          @search="onSearch"
+        />
+      </a-col>
+    </a-row>
+    <a-row :span="24">
+      <ClientOnly>
+        <a-table
+          class="table-users"
+          row-key="id"
+          :data-source="usersList"
+          :columns="columns"
+        ></a-table>
+      </ClientOnly>
+    </a-row>
+  </div>
 </template>
 
 <style lang="scss" scoped>

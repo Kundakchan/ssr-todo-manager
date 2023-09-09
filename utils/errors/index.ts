@@ -9,8 +9,6 @@ const handlerErrorFirebase = (error: FirebaseError | unknown) => {
       description: error.message,
       duration: 3,
     });
-  } else {
-    console.error("error: unknown");
   }
   throw error;
 };

@@ -45,7 +45,8 @@ const statusList = reactive([
 <template>
   <a-radio-group v-model:value="tab" @change="changeHandler">
     <a-radio-button
-      v-for="item in statusList"
+      v-for="(item, index) in statusList"
+      :key="index"
       class="tab-item bg-transparent"
       :value="item.value"
       >{{ item.label }}</a-radio-button

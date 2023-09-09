@@ -1,1 +1,1 @@
-export { handlerErrorFirebase, handlerErrorCustom } from './errors'
+export { handlerErrorFirebase, handlerErrorCustom } from "./errors";

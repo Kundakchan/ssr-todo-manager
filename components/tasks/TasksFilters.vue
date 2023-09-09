@@ -4,7 +4,7 @@
 // const store = useTasksStore()
 // const { setFilter, getList } = store
 
-const tab = 'all' // ref(store.filters.status)
+const tab = "all"; // ref(store.filters.status)
 
 // watch(
 //   () => store.filters.status,
@@ -16,40 +16,45 @@ const tab = 'all' // ref(store.filters.status)
 const changeHandler = () => {
   // setFilter({ field: 'status', value: tab.value })
   // getList()
-}
+};
 
 const statusList = reactive([
   {
-    label: 'Все',
-    value: 'all'
+    label: "Все",
+    value: "all",
   },
   {
-    label: 'Новые',
-    value: 'new'
+    label: "Новые",
+    value: "new",
   },
   {
-    label: 'В процессе',
-    value: 'processing'
+    label: "В процессе",
+    value: "processing",
   },
   {
-    label: 'Выполненные',
-    value: 'success'
+    label: "Выполненные",
+    value: "success",
   },
   {
-    label: 'Отменённые',
-    value: 'cancel'
-  }
-])
+    label: "Отменённые",
+    value: "cancel",
+  },
+]);
 </script>
 
 <template>
   <a-radio-group v-model:value="tab" @change="changeHandler">
-    <a-radio-button class="tab-item bg-transparent" v-for="item in statusList" :value="item.value">{{ item.label }}</a-radio-button>
+    <a-radio-button
+      v-for="item in statusList"
+      class="tab-item bg-transparent"
+      :value="item.value"
+      >{{ item.label }}</a-radio-button
+    >
   </a-radio-group>
 </template>
 
 <style lang="scss" scoped>
-@import '~/assets/styles/variables/colors.scss';
+@import "~/assets/styles/variables/colors.scss";
 .tab-item {
   border: none;
   padding: 0;
@@ -60,6 +65,6 @@ const statusList = reactive([
   display: none;
 }
 .tab-item.ant-radio-button-wrapper-checked {
-  border-bottom: 2px solid get-color('blue')
+  border-bottom: 2px solid get-color("blue");
 }
 </style>

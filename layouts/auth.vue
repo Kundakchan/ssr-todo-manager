@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-import ru_RU from 'ant-design-vue/es/locale/ru_RU'
-const locale = reactive(ru_RU)
+import ru_RU from "ant-design-vue/es/locale/ru_RU";
+const locale = reactive(ru_RU);
 const theme = reactive({
   token: {
     colorBgLayout: "#fff",
-    borderRadius: 0
-  }
-})
+    borderRadius: 0,
+  },
+});
 </script>
 
 <template>
@@ -14,7 +14,11 @@ const theme = reactive({
     <a-layout class="content">
       <a-row align="middle">
         <a-col class="background-container" :span="17">
-          <img class="background" src="@/assets/images/authorization/background.webp" alt="">
+          <img
+            class="background"
+            src="@/assets/images/authorization/background.webp"
+            alt=""
+          />
         </a-col>
         <a-col class="pt24 pb24 pr64" :span="7">
           <slot></slot>

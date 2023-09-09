@@ -1,21 +1,24 @@
 <script lang="ts" setup>
-import { HomeOutlined, InfoCircleOutlined, UsergroupAddOutlined } from '@ant-design/icons-vue';
+import {
+  HomeOutlined,
+  InfoCircleOutlined,
+  UsergroupAddOutlined,
+} from "@ant-design/icons-vue";
 
 const navigations = reactive([
   {
-    name: 'index',
-    icon: HomeOutlined
+    name: "index",
+    icon: HomeOutlined,
   },
   {
-    name: 'about',
-    icon: InfoCircleOutlined
+    name: "about",
+    icon: InfoCircleOutlined,
   },
   {
-    name: 'users',
-    icon: UsergroupAddOutlined
-  }
-])
-
+    name: "users",
+    icon: UsergroupAddOutlined,
+  },
+]);
 </script>
 
 <template>
@@ -24,7 +27,11 @@ const navigations = reactive([
       <a-row justify="center">
         <a-col>
           <a-space>
-            <NuxtLink v-for="(item, index) in navigations" :key="index" :to="{ name: item.name }">
+            <NuxtLink
+              v-for="(item, index) in navigations"
+              :key="index"
+              :to="{ name: item.name }"
+            >
               <a-button :shape="'circle'" :size="'large'" :type="'primary'">
                 <template #icon>
                   <component :is="item.icon"></component>

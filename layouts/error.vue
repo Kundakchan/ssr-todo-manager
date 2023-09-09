@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import ru_RU from 'ant-design-vue/es/locale/ru_RU'
-const locale = reactive(ru_RU)
+import ru_RU from "ant-design-vue/es/locale/ru_RU";
+const locale = reactive(ru_RU);
 const theme = reactive({
   token: {
-    borderRadius: 0
-  }
-})
+    borderRadius: 0,
+  },
+});
 </script>
 
 <template>

@@ -1,11 +1,11 @@
 $colors: (
-  'red': #FF2E00,
-  'black': #000,
-  'blue': #1890FF,
-  'white': #fff,
-  'transparent': transparent
+  "red": #ff2e00,
+  "black": #000,
+  "blue": #1890ff,
+  "white": #fff,
+  "transparent": transparent,
 );
 
-@function get-color ($name) {
-  @return map-get($colors, $name)
+@function get-color($name) {
+  @return map-get($colors, $name);
 }

@@ -1,45 +1,49 @@
 <script lang="ts" setup>
-import type { TableColumnProps } from 'ant-design-vue'
+import type { TableColumnProps } from "ant-design-vue";
 interface Task {
-  id: string,
-  created: string,
-  updated: string,
-  name: string
+  id: string;
+  created: string;
+  updated: string;
+  name: string;
 }
 const columns: TableColumnProps<Task>[] = reactive([
   {
     title: "Дата создания",
     dataIndex: "created",
     sorter: true,
-    sortDirections: ['ascend', 'descend'],
-    width: 150
+    sortDirections: ["ascend", "descend"],
+    width: 150,
   },
   {
     title: "Дата обновления",
     dataIndex: "updated",
     sorter: true,
-    sortDirections: ['ascend', 'descend'],
-    width: 180
+    sortDirections: ["ascend", "descend"],
+    width: 180,
   },
   {
     title: "Названия",
     dataIndex: "name",
     sorter: true,
-    sortDirections: ['ascend', 'descend']
+    sortDirections: ["ascend", "descend"],
   },
   {
     title: "Действия",
     dataIndex: "actions",
-    width: 80
-  }
-])
+    width: 80,
+  },
+]);
 
-const tasks = ref([])
+const tasks = ref([]);
 </script>
 
 <template>
   <ClientOnly>
-    <a-table class="table-tasks" :data-source="tasks" :columns="columns"></a-table>
+    <a-table
+      class="table-tasks"
+      :data-source="tasks"
+      :columns="columns"
+    ></a-table>
   </ClientOnly>
 </template>
 

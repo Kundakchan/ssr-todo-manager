@@ -1,4 +1,4 @@
-@import '../variables/colors';
+@import "../variables/colors";
 
 @each $key, $value in $colors {
   .color-#{$key} {

@@ -6,15 +6,23 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint": "eslint --ext .ts,.js,.vue,.scss,.css,.yml --ignore-path .gitignore .",
+    "lint:fix": "eslint --ext .ts,.js,.vue,.scss,.css,.yml --ignore-path .gitignore . --fix"
   },
   "devDependencies": {
     "@ant-design-vue/nuxt": "^1.1.0",
     "@nuxt/devtools": "latest",
     "@types/node": "^18.17.3",
+    "@typescript-eslint/eslint-plugin": "^6.7.2",
+    "@typescript-eslint/parser": "^6.7.2",
+    "eslint": "^8.49.0",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "eslint-plugin-vue": "^9.17.0",
     "nuxt": "^3.6.5",
     "sass": "^1.65.1",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "vite-plugin-eslint": "^1.8.1"
   },
   "dependencies": {
     "firebase": "^10.2.0"

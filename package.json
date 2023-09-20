@@ -7,8 +7,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint": "eslint --ext .ts,.js,.vue,.scss,.css,.yml --ignore-path .gitignore .",
-    "lint:fix": "eslint --ext .ts,.js,.vue,.scss,.css,.yml --ignore-path .gitignore . --fix"
+    "lint": "eslint --ext .ts,.js,.vue --ignore-path .gitignore .",
+    "lint:fix": "eslint --ext .ts,.js,.vue --ignore-path .gitignore . --fix"
   },
   "devDependencies": {
     "@ant-design-vue/nuxt": "^1.1.0",

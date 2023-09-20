@@ -35,7 +35,7 @@ const items: ItemType[] = reactive([
         :type="'primary'"
         :size="'large'"
         :icon="h(UserOutlined)"
-      ></a-button>
+      />
     </template>
     <a-dropdown>
       <a-button
@@ -43,7 +43,7 @@ const items: ItemType[] = reactive([
         :type="'primary'"
         :size="'large'"
         :icon="h(UserOutlined)"
-      ></a-button>
+      />
       <template #overlay>
         <a-menu :items="items" />
       </template>

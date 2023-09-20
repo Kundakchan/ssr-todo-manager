@@ -3,13 +3,24 @@
 <template>
   <div>
     <a-row>
-      <a-col :offset="2" :span="12">
-        <a-typography-title class="fs-64">О приложении</a-typography-title>
+      <a-col
+        :offset="2"
+        :span="12"
+      >
+        <a-typography-title class="fs-64">
+          О приложении
+        </a-typography-title>
       </a-col>
     </a-row>
     <a-row>
-      <a-col :offset="2" :span="12">
-        <a-typography-paragraph class="fs-16" strong>
+      <a-col
+        :offset="2"
+        :span="12"
+      >
+        <a-typography-paragraph
+          class="fs-16"
+          strong
+        >
           <span class="color-red">Todo</span> manager - это приложение, которое
           помогает управлять задачами и делами в повседневной жизни. Оно
           позволяет создавать списки задач, устанавливать приоритеты,

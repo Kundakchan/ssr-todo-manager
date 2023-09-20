@@ -47,12 +47,15 @@ const columns: TableColumnProps<Users>[] = reactive([
   <div>
     <a-row :justify="'center'">
       <a-col>
-        <a-typography-title class="fs-64 mb48 mt48"
-          ><span class="color-red">П</span>ользователи</a-typography-title
-        >
+        <a-typography-title class="fs-64 mb48 mt48">
+          <span class="color-red">П</span>ользователи
+        </a-typography-title>
       </a-col>
     </a-row>
-    <a-row :justify="'center'" class="mb24">
+    <a-row
+      :justify="'center'"
+      class="mb24"
+    >
       <a-col :span="12">
         <a-input-search
           v-model:value="searchText"
@@ -70,7 +73,7 @@ const columns: TableColumnProps<Users>[] = reactive([
           row-key="id"
           :data-source="usersList"
           :columns="columns"
-        ></a-table>
+        />
       </ClientOnly>
     </a-row>
   </div>

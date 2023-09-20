@@ -9,9 +9,12 @@ const theme = reactive({
 </script>
 
 <template>
-  <a-config-provider :theme="theme" :locale="locale">
+  <a-config-provider
+    :theme="theme"
+    :locale="locale"
+  >
     <a-layout class="content">
-      <slot></slot>
+      <slot />
     </a-layout>
   </a-config-provider>
 </template>

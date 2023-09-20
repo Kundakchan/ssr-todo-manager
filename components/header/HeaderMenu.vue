@@ -32,9 +32,13 @@ const navigations = reactive([
               :key="index"
               :to="{ name: item.name }"
             >
-              <a-button :shape="'circle'" :size="'large'" :type="'primary'">
+              <a-button
+                :shape="'circle'"
+                :size="'large'"
+                :type="'primary'"
+              >
                 <template #icon>
-                  <component :is="item.icon"></component>
+                  <component :is="item.icon" />
                 </template>
               </a-button>
             </NuxtLink>
@@ -43,7 +47,7 @@ const navigations = reactive([
       </a-row>
     </a-col>
     <a-col flex="none">
-      <header-user-menu></header-user-menu>
+      <header-user-menu />
     </a-col>
   </a-row>
 </template>

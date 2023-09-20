@@ -18,9 +18,12 @@ const goToHome = () => {
     :sub-title="`Извините, мы не можем найти страницу: ${page}`"
   >
     <template #extra>
-      <a-button type="primary" @click="goToHome"
-        >Вернуться на главную страницу</a-button
+      <a-button
+        type="primary"
+        @click="goToHome"
       >
+        Вернуться на главную страницу
+      </a-button>
     </template>
   </a-result>
 </template>

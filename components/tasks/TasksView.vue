@@ -43,7 +43,7 @@ const tasks = ref([]);
       class="table-tasks"
       :data-source="tasks"
       :columns="columns"
-    ></a-table>
+    />
   </ClientOnly>
 </template>
 

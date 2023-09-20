@@ -10,18 +10,27 @@ const theme = reactive({
 </script>
 
 <template>
-  <a-config-provider :theme="theme" :locale="locale">
+  <a-config-provider
+    :theme="theme"
+    :locale="locale"
+  >
     <a-layout class="content">
       <a-row align="middle">
-        <a-col class="background-container" :span="17">
+        <a-col
+          class="background-container"
+          :span="17"
+        >
           <img
             class="background"
             src="@/assets/images/authorization/background.webp"
             alt=""
-          />
+          >
         </a-col>
-        <a-col class="pt24 pb24 pr64" :span="7">
-          <slot></slot>
+        <a-col
+          class="pt24 pb24 pr64"
+          :span="7"
+        >
+          <slot />
         </a-col>
       </a-row>
     </a-layout>
